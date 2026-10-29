@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feelings Vending Co.</title>
+    <meta name="description" content="A vending machine that sells feelings. Pick a can, drink the mood." />
+    <meta name="theme-color" content="#49a6ff" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- display=block: text waits for the real font instead of flashing a fallback (the loader covers the wait) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Dela+Gothic+One&family=DotGothic16&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=block"
+      rel="stylesheet"
+    />
+    <!-- linked here, not imported from JS, so the very first paint is already styled -->
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <canvas id="scene" aria-label="A 3D vending machine full of canned feelings"></canvas>
+
+    <header class="topbar">
+      <a class="logo" href="./" aria-label="Feelings Vending Co.">
+        <span class="logo-main sticker" data-text="FEELINGS">FEELINGS</span>
+        <span class="logo-jp sticker" lang="ja" data-text="きもちの自販機">きもちの自販機</span>
+      </a>
+      <div class="actions">
+        <button id="sound-btn" class="chip icon" aria-pressed="true" aria-label="Mute sound">
+          <svg class="icon-on" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" />
+            <path d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+          </svg>
+          <svg class="icon-off" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor" />
+            <path d="M16.5 9.5l5 5M21.5 9.5l-5 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
+          </svg>
+        </button>
+        <button id="menu-btn" class="chip" aria-controls="menu" aria-expanded="false">Menu</button>
+      </div>
+    </header>
+
+    <p id="hint" class="hint">
+      <span class="hint-main">Pick a feeling</span>
+      <span class="hint-jp" lang="ja">すきな きもちを えらんでね</span>
+    </p>
+    <div id="tooltip" class="tooltip" hidden></div>
+    <aside id="card" class="card" hidden aria-live="polite"></aside>
+    <div id="toast" class="toast" hidden aria-live="polite"></div>
+    <div id="sfx" class="sfx sticker" hidden aria-hidden="true" lang="ja"></div>
+
+    <div id="menu" class="menu" hidden>
+      <div class="menu-panel" role="dialog" aria-labelledby="menu-title">
+        <div class="menu-head">
+          <div>
+            <p class="menu-jp" lang="ja">本日のラインナップ</p>
+            <h2 id="menu-title" class="menu-title">Today's lineup</h2>
+          </div>
+          <button id="menu-close" class="chip icon" aria-label="Close menu">✕</button>
+        </div>
+        <ul id="menu-list"></ul>
+        <p class="menu-foot">Pick a can · Exact change only · No refunds</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <span>Made with three.js by <b>irfanafifiromzi</b></span>
+    </footer>
+
+    <div id="loader" class="loader">
+      <span class="loader-can" aria-hidden="true"></span>
+      <span class="logo-main sticker" data-text="FEELINGS">FEELINGS</span>
+      <span class="loader-sub">Restocking feelings… <span lang="ja">補充中</span></span>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

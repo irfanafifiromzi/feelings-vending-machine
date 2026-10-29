@@ -1,0 +1,103 @@
+// Slot order: row A is the top shelf, columns 1-4 left to right.
+// color = can, pop = accent on the can, ink = text on the can, bg = the world colour after drinking it.
+// jp = the Japanese name printed down the side of the can, motif = the drawing on the front.
+export const FEELINGS = [
+  {
+    code: 'A1', name: 'Courage Soda', jp: '勇気ソーダ', motif: 'bolt', feel: 'brave',
+    price: '1 deep breath',
+    tagline: 'For asking the question everyone else is thinking.',
+    facts: [['Bravery', '120%'], ['Second thoughts', '0%'], ['Voice cracks', '1 (allowed)']],
+    side: 'Volunteering to go first. Speaking up in meetings.',
+    color: '#ef3b2d', pop: '#ffd23f', ink: '#fff6e5', bg: '#ffb820', isNew: true,
+  },
+  {
+    code: 'A2', name: 'Focus Fuel', jp: '集中ドリンク', motif: 'target', feel: 'focused',
+    price: '0 notifications',
+    tagline: 'One tab open. Just one. We checked.',
+    facts: [['Focus', '110%'], ['Open tabs', '1'], ['Phone checks', '0']],
+    side: 'Actually finishing things. A strange, pleasant silence.',
+    color: '#2459ff', pop: '#9be7ff', ink: '#fff6e5', bg: '#7cc8ff',
+  },
+  {
+    code: 'A3', name: 'Big Laugh Lemonade', jp: '大爆笑レモネード', motif: 'grin', feel: 'hilarious',
+    price: '1 bad joke',
+    tagline: 'Contains real snorts. Do not drink in a library.',
+    facts: [['Giggles', '150%'], ['Snorts', '3 per sip'], ['Composure', '5%']],
+    side: 'Laughing at your own joke before the punchline.',
+    color: '#ffd02e', pop: '#ff5a36', ink: '#2a1608', bg: '#ff7a45',
+  },
+  {
+    code: 'A4', name: 'Nap Juice', jp: 'おひるねジュース', motif: 'moon', feel: 'sleepy',
+    price: '1 yawn',
+    tagline: 'Tastes like a Sunday afternoon with the curtains shut.',
+    facts: [['Drowsiness', '98%'], ['Alarms snoozed', '6'], ['Productivity', '0%']],
+    side: 'Waking up unsure what year it is.',
+    color: '#4a3fbf', pop: '#ffd84d', ink: '#f2edff', bg: '#9c8cff',
+  },
+  {
+    code: 'B1', name: 'Nostalgia Fizz', jp: 'なつかしサイダー', motif: 'tape', feel: 'nostalgic',
+    price: '1 old photo',
+    tagline: 'Tastes exactly like summer when you were nine.',
+    facts: [['Good old days', '100%'], ['Songs from 2009', '14'], ['Present day', '0%']],
+    side: 'Texting someone you have not talked to in years.',
+    color: '#ff8a2a', pop: '#4fd1c5', ink: '#fff6e5', bg: '#ffd27a',
+  },
+  {
+    code: 'B2', name: 'Liquid Patience', jp: '忍耐ドリンク', motif: 'snail', feel: 'patient',
+    price: 'wait for it…',
+    tagline: 'Slow-brewed. Very slow. Still brewing, honestly.',
+    facts: [['Patience', '100%'], ['Queue tolerance', 'Infinite'], ['Honking', '0%']],
+    side: 'Letting everyone merge in traffic.',
+    color: '#1f9e6e', pop: '#ffe08a', ink: '#f0fff6', bg: '#8be0b0',
+  },
+  {
+    code: 'B3', name: 'Main Character Cola', jp: '主人公コーラ', motif: 'star', feel: 'like the main character',
+    price: '3 compliments',
+    tagline: 'Every room you walk into now has a soundtrack.',
+    facts: [['Confidence', '200%'], ['Slow-motion walks', '12'], ['Background music', 'Always']],
+    side: 'Staring dramatically out of bus windows.',
+    color: '#ff3d8b', pop: '#ffe14d', ink: '#fff6e5', bg: '#ffa3c7', isNew: true,
+  },
+  {
+    code: 'B4', name: 'Monday Energy', jp: '月曜日コーヒー', motif: 'mug', feel: 'ready for Monday',
+    price: '2 sighs',
+    tagline: 'Bitter, strong, and somehow already late.',
+    facts: [['Caffeine', '300%'], ['Enthusiasm', '2%'], ['Emails answered', '47']],
+    side: 'Typing “per my last email” without meaning to.',
+    color: '#3a2520', pop: '#ff9f43', ink: '#ffe2b8', bg: '#c98f6a',
+  },
+  {
+    code: 'C1', name: 'Deep Breath Tonic', jp: '深呼吸トニック', motif: 'wave', feel: 'calm',
+    price: '4 slow breaths',
+    tagline: 'Inhale. Exhale. Read that email tomorrow.',
+    facts: [['Calm', '100%'], ['Shoulders dropped', '5 cm'], ['Panic', '0%']],
+    side: 'Saying “it is what it is” and meaning it.',
+    color: '#22b5c9', pop: '#fff1a8', ink: '#f2feff', bg: '#93e3ec',
+  },
+  {
+    code: 'C2', name: 'Fresh Start Lime', jp: '再出発ライム', motif: 'sprout', feel: 'brand new',
+    price: '1 new notebook',
+    tagline: 'Every January, in one can.',
+    facts: [['Motivation', '100% (3 days)'], ['New habits', '12'], ['Old habits', 'Pending']],
+    side: 'Buying a planner you will use twice.',
+    color: '#7ccf3a', pop: '#fff6e5', ink: '#173300', bg: '#d4f27a',
+  },
+  {
+    code: 'C3', name: 'Instant Confidence', jp: '自信満々', motif: 'crown', feel: 'unstoppable',
+    price: '1 mirror selfie',
+    tagline: 'Shake well. Then shake hands firmly.',
+    facts: [['Self-belief', '180%'], ['Imposter syndrome', '0%'], ['Power poses', '9']],
+    side: 'Replying-all. With confidence.',
+    color: '#8a35ff', pop: '#ffd23f', ink: '#fbf3ff', bg: '#c9a2ff',
+  },
+  {
+    code: 'C4', name: 'Free Time', jp: '自由時間', motif: 'umbrella', feel: 'free',
+    price: 'sold out', soldOut: true,
+    tagline: 'Out of stock since 2019. Restocking: never.',
+    facts: [['Free time', '0%'], ['Restock date', 'Unknown'], ['Demand', 'Very high']],
+    side: 'Unknown. Nobody has tried it in years.',
+    color: '#c8c1b6', pop: '#8b857c', ink: '#45403a', bg: '#e6e0d6',
+  },
+];
+
+export const START_BG = '#49a6ff';

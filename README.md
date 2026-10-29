@@ -1,5 +1,7 @@
 # Feelings Vending Co. (きもちの自販機)
 
+By Irfan Afifi · [Portfolio](https://portfolio-irfanafifi.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/irfanafifiromzi)
+
 A small three.js website: a Japanese-style drinks machine that sells canned feelings.
 Click a can, its button, or pick one from **Menu**. The can drops into the tray (ガコン!) and flies out to you.
 Read its "Feeling Facts", then **Drink it** and the whole world turns that feeling's colour. Or **Put it back** (no refunds).

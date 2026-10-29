@@ -269,16 +269,30 @@ button {
   pointer-events: none;
 }
 
-/* the handle as a small ink tag, like the code badges on the cans */
-.footer b {
+/* the handle (portfolio) and LinkedIn as small ink tags, like the code badges on the cans */
+.footer .credit {
+  display: inline-block;
   margin-left: 4px;
   padding: 3px 9px 2px;
   border-radius: 999px;
   background: var(--ink);
   color: var(--cream);
-  font-weight: 400;
   letter-spacing: 0.03em;
+  text-decoration: none;
   text-transform: none;
+  pointer-events: auto;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.footer .credit:hover {
+  background: var(--yellow);
+  color: var(--ink);
+  transform: rotate(-4deg);
+}
+
+.footer .credit.in {
+  margin-left: 2px;
+  padding: 3px 7px 2px;
 }
 
 /* ---------- product panel: a poster laid straight on the sunburst, no box ---------- */

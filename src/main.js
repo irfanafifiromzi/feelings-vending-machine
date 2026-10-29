@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import gsap from 'gsap';
+import { inject } from '@vercel/analytics';
 import { FEELINGS, START_BG } from './feelings.js';
 import { createCanKit } from './can.js';
 import { buildMachine } from './machine.js';
@@ -7,6 +8,8 @@ import { Sound } from './sound.js';
 import { makeBackdrop, makeDot, mix } from './textures.js';
 import { INK, outline, setOutlineResolution, toon } from './toon.js';
 import { createUI } from './ui.js';
+
+inject(); // Vercel Web Analytics: counts visitors and page views on the deployed site (debug-only in dev)
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const CREAM = '#fff6e5';
